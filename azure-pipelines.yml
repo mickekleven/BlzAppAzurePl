@@ -29,7 +29,7 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - task: VSTest@2
-displayName: 'unit test run'
+  displayName: 'unit test run'
   inputs:
     platform: '$(buildPlatform)\*test*.dll'
     configuration: '$(buildConfiguration)'
