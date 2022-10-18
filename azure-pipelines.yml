@@ -28,8 +28,8 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: VSTest@2
-  displayName: 'unit test run'
+- task: DotNetCoreCLI@2
   inputs:
-    platform: '$(buildPlatform)\*test*.dll'
-    configuration: '$(buildConfiguration)'
+    command: 'test'
+    projects: '**/*.csproj'
+    testRunTitle: 'Blazor test'
