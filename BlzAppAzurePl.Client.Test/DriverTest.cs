@@ -46,9 +46,9 @@ namespace BlzAppAzurePl.Client.Test
 
 
         [Theory]
-        [InlineData(9, 30, "cracked")]
-        [InlineData(2, 110, "cracked")]
-        public void When_driverSpeed_is_limited_to_10_Should_throw_exception(int actual, int maxSpeed, string expected)
+        [InlineData(9, 30)]
+        [InlineData(2, 110)]
+        public void When_driverSpeed_is_limited_to_10_Should_throw_exception(int actual, int maxSpeed)
         {
             //Arrange
             Func<int, int, bool> speedChecker = (actSpeed, expSpeed) => { return actSpeed <= expSpeed; };
